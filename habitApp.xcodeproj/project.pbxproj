@@ -1,0 +1,478 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 51;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20B1761C63F606B76563E0F2 /* Pods_habitApp.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF0AA7A38B23F73077C3AE83 /* Pods_habitApp.framework */; };
+		95B3258923E0F0DA00BF5051 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3258823E0F0DA00BF5051 /* AppDelegate.swift */; };
+		95B3258B23E0F0DA00BF5051 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3258A23E0F0DA00BF5051 /* SceneDelegate.swift */; };
+		95B3259323E0F0DA00BF5051 /* habitApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 95B3259123E0F0DA00BF5051 /* habitApp.xcdatamodeld */; };
+		95B3259523E0F0DB00BF5051 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 95B3259423E0F0DB00BF5051 /* Assets.xcassets */; };
+		95B3259823E0F0DB00BF5051 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95B3259623E0F0DB00BF5051 /* LaunchScreen.storyboard */; };
+		95B325A023E0F1B700BF5051 /* CoreDataManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B3259F23E0F1B700BF5051 /* CoreDataManager.swift */; };
+		95B325A223E0F20D00BF5051 /* Habit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B325A123E0F20D00BF5051 /* Habit.swift */; };
+		95B325A423E0F22E00BF5051 /* HabitCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B325A323E0F22E00BF5051 /* HabitCell.swift */; };
+		95B325A623E0F25E00BF5051 /* CreateHabitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B325A523E0F25E00BF5051 /* CreateHabitViewController.swift */; };
+		95B325A823E0F27900BF5051 /* HabitListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B325A723E0F27900BF5051 /* HabitListViewController.swift */; };
+		95B325AA23E0F29A00BF5051 /* HabitDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B325A923E0F29A00BF5051 /* HabitDetailViewController.swift */; };
+		95B325AC23E0F2C600BF5051 /* HabitNameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B325AB23E0F2C600BF5051 /* HabitNameViewController.swift */; };
+		95B325AE23E0F2E000BF5051 /* Date+Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B325AD23E0F2E000BF5051 /* Date+Helper.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		95B3258523E0F0DA00BF5051 /* habitApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = habitApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		95B3258823E0F0DA00BF5051 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		95B3258A23E0F0DA00BF5051 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
+		95B3259223E0F0DA00BF5051 /* habitApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = habitApp.xcdatamodel; sourceTree = "<group>"; };
+		95B3259423E0F0DB00BF5051 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		95B3259723E0F0DB00BF5051 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		95B3259923E0F0DB00BF5051 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		95B3259F23E0F1B700BF5051 /* CoreDataManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CoreDataManager.swift; sourceTree = "<group>"; };
+		95B325A123E0F20D00BF5051 /* Habit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Habit.swift; sourceTree = "<group>"; };
+		95B325A323E0F22E00BF5051 /* HabitCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitCell.swift; sourceTree = "<group>"; };
+		95B325A523E0F25E00BF5051 /* CreateHabitViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateHabitViewController.swift; sourceTree = "<group>"; };
+		95B325A723E0F27900BF5051 /* HabitListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitListViewController.swift; sourceTree = "<group>"; };
+		95B325A923E0F29A00BF5051 /* HabitDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitDetailViewController.swift; sourceTree = "<group>"; };
+		95B325AB23E0F2C600BF5051 /* HabitNameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HabitNameViewController.swift; sourceTree = "<group>"; };
+		95B325AD23E0F2E000BF5051 /* Date+Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Date+Helper.swift"; sourceTree = "<group>"; };
+		A591A0FD20B1F6873C0A722C /* Pods-habitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-habitApp.release.xcconfig"; path = "Target Support Files/Pods-habitApp/Pods-habitApp.release.xcconfig"; sourceTree = "<group>"; };
+		BC59982CFA3275FF6614A3A0 /* Pods-habitApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-habitApp.debug.xcconfig"; path = "Target Support Files/Pods-habitApp/Pods-habitApp.debug.xcconfig"; sourceTree = "<group>"; };
+		CF0AA7A38B23F73077C3AE83 /* Pods_habitApp.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_habitApp.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		95B3258223E0F0DA00BF5051 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20B1761C63F606B76563E0F2 /* Pods_habitApp.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		2E95ABE88A4CD7987E799819 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				CF0AA7A38B23F73077C3AE83 /* Pods_habitApp.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		72F694AC83E37245B612CC9D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				BC59982CFA3275FF6614A3A0 /* Pods-habitApp.debug.xcconfig */,
+				A591A0FD20B1F6873C0A722C /* Pods-habitApp.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		95B3257C23E0F0DA00BF5051 = {
+			isa = PBXGroup;
+			children = (
+				95B3258723E0F0DA00BF5051 /* habitApp */,
+				95B3258623E0F0DA00BF5051 /* Products */,
+				72F694AC83E37245B612CC9D /* Pods */,
+				2E95ABE88A4CD7987E799819 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		95B3258623E0F0DA00BF5051 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				95B3258523E0F0DA00BF5051 /* habitApp.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		95B3258723E0F0DA00BF5051 /* habitApp */ = {
+			isa = PBXGroup;
+			children = (
+				95B3258823E0F0DA00BF5051 /* AppDelegate.swift */,
+				95B3258A23E0F0DA00BF5051 /* SceneDelegate.swift */,
+				95B3259F23E0F1B700BF5051 /* CoreDataManager.swift */,
+				95B325B023E0F2F500BF5051 /* Model */,
+				95B325B123E0F2FC00BF5051 /* View */,
+				95B325AF23E0F2EE00BF5051 /* Controller */,
+				95B325B223E0F30200BF5051 /* Extension */,
+				95B3259423E0F0DB00BF5051 /* Assets.xcassets */,
+				95B3259623E0F0DB00BF5051 /* LaunchScreen.storyboard */,
+				95B3259923E0F0DB00BF5051 /* Info.plist */,
+				95B3259123E0F0DA00BF5051 /* habitApp.xcdatamodeld */,
+			);
+			path = habitApp;
+			sourceTree = "<group>";
+		};
+		95B325AF23E0F2EE00BF5051 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				95B325A523E0F25E00BF5051 /* CreateHabitViewController.swift */,
+				95B325A723E0F27900BF5051 /* HabitListViewController.swift */,
+				95B325A923E0F29A00BF5051 /* HabitDetailViewController.swift */,
+				95B325AB23E0F2C600BF5051 /* HabitNameViewController.swift */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		95B325B023E0F2F500BF5051 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				95B325A123E0F20D00BF5051 /* Habit.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		95B325B123E0F2FC00BF5051 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				95B325A323E0F22E00BF5051 /* HabitCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		95B325B223E0F30200BF5051 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				95B325AD23E0F2E000BF5051 /* Date+Helper.swift */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		95B3258423E0F0DA00BF5051 /* habitApp */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 95B3259C23E0F0DB00BF5051 /* Build configuration list for PBXNativeTarget "habitApp" */;
+			buildPhases = (
+				A259CF823482BFB1A9E298D8 /* [CP] Check Pods Manifest.lock */,
+				95B3258123E0F0DA00BF5051 /* Sources */,
+				95B3258223E0F0DA00BF5051 /* Frameworks */,
+				95B3258323E0F0DA00BF5051 /* Resources */,
+				58DF213A892176591ED015DE /* [CP] Embed Pods Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = habitApp;
+			productName = habitApp;
+			productReference = 95B3258523E0F0DA00BF5051 /* habitApp.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		95B3257D23E0F0DA00BF5051 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1100;
+				LastUpgradeCheck = 1100;
+				ORGANIZATIONNAME = "Meagan Nolan";
+				TargetAttributes = {
+					95B3258423E0F0DA00BF5051 = {
+						CreatedOnToolsVersion = 11.0;
+					};
+				};
+			};
+			buildConfigurationList = 95B3258023E0F0DA00BF5051 /* Build configuration list for PBXProject "habitApp" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 95B3257C23E0F0DA00BF5051;
+			productRefGroup = 95B3258623E0F0DA00BF5051 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				95B3258423E0F0DA00BF5051 /* habitApp */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		95B3258323E0F0DA00BF5051 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95B3259823E0F0DB00BF5051 /* LaunchScreen.storyboard in Resources */,
+				95B3259523E0F0DB00BF5051 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		58DF213A892176591ED015DE /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-habitApp/Pods-habitApp-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-habitApp/Pods-habitApp-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-habitApp/Pods-habitApp-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		A259CF823482BFB1A9E298D8 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-habitApp-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		95B3258123E0F0DA00BF5051 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				95B325A223E0F20D00BF5051 /* Habit.swift in Sources */,
+				95B325AC23E0F2C600BF5051 /* HabitNameViewController.swift in Sources */,
+				95B325A823E0F27900BF5051 /* HabitListViewController.swift in Sources */,
+				95B3258923E0F0DA00BF5051 /* AppDelegate.swift in Sources */,
+				95B325AE23E0F2E000BF5051 /* Date+Helper.swift in Sources */,
+				95B3259323E0F0DA00BF5051 /* habitApp.xcdatamodeld in Sources */,
+				95B325A423E0F22E00BF5051 /* HabitCell.swift in Sources */,
+				95B325AA23E0F29A00BF5051 /* HabitDetailViewController.swift in Sources */,
+				95B325A623E0F25E00BF5051 /* CreateHabitViewController.swift in Sources */,
+				95B325A023E0F1B700BF5051 /* CoreDataManager.swift in Sources */,
+				95B3258B23E0F0DA00BF5051 /* SceneDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		95B3259623E0F0DB00BF5051 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				95B3259723E0F0DB00BF5051 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		95B3259A23E0F0DB00BF5051 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		95B3259B23E0F0DB00BF5051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		95B3259D23E0F0DB00BF5051 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BC59982CFA3275FF6614A3A0 /* Pods-habitApp.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7JSJG6852;
+				INFOPLIST_FILE = habitApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.meagannolan.habitApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Debug;
+		};
+		95B3259E23E0F0DB00BF5051 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A591A0FD20B1F6873C0A722C /* Pods-habitApp.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = W7JSJG6852;
+				INFOPLIST_FILE = habitApp/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.meagannolan.habitApp;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 1;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		95B3258023E0F0DA00BF5051 /* Build configuration list for PBXProject "habitApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95B3259A23E0F0DB00BF5051 /* Debug */,
+				95B3259B23E0F0DB00BF5051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		95B3259C23E0F0DB00BF5051 /* Build configuration list for PBXNativeTarget "habitApp" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				95B3259D23E0F0DB00BF5051 /* Debug */,
+				95B3259E23E0F0DB00BF5051 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		95B3259123E0F0DA00BF5051 /* habitApp.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				95B3259223E0F0DA00BF5051 /* habitApp.xcdatamodel */,
+			);
+			currentVersion = 95B3259223E0F0DA00BF5051 /* habitApp.xcdatamodel */;
+			path = habitApp.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
+	};
+	rootObject = 95B3257D23E0F0DA00BF5051 /* Project object */;
+}
