@@ -10,8 +10,13 @@ import UIKit
 import Stevia
 import CoreData
 
+protocol HabitNameViewControllerDelegate: class {
+    func habitNameVCDidDismiss(_ vc: HabitNameViewController)
+}
+
 class HabitNameViewController: UIViewController {
 
+    weak var delegate: HabitNameViewControllerDelegate?
     private let habit: Habit
     private let imageView = UIImageView()
     private let nameLabel: UILabel = {
@@ -44,7 +49,6 @@ class HabitNameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
-        textField.delegate = self
     }
 
     private func configureLayout() {
@@ -69,11 +73,8 @@ class HabitNameViewController: UIViewController {
     @objc private func buttonTapped() {
         habit.name = habitName
         try? CoreDataManager.shared.context.save()
-        dismiss(animated: true, completion: nil)
+        dismiss(animated: true) {
+            self.delegate?.habitNameVCDidDismiss(self)
+        }
     }
-
-}
-
-extension HabitNameViewController: UITextFieldDelegate {
-
 }

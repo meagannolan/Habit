@@ -56,6 +56,7 @@ class HabitListViewController: UIViewController {
 
     @objc private func plusButtonTapped() {
         let createHabitVC = CreateHabitViewController()
+        createHabitVC.delegate = self
         present(createHabitVC, animated: true, completion: nil)
     }
 
@@ -80,5 +81,11 @@ extension HabitListViewController: UITableViewDataSource, UITableViewDelegate {
         let habit = habits[indexPath.row]
         let habitDetailVC = HabitDetailViewController(habit)
         navigationController?.pushViewController(habitDetailVC, animated: true)
+    }
+}
+
+extension HabitListViewController: CreateHabitViewControllerDelegate {
+    func createHabitVCDidDismiss(_ vc: CreateHabitViewController) {
+        fetchHabits()
     }
 }

@@ -10,27 +10,30 @@ import UIKit
 import Stevia
 import CoreData
 
+protocol CreateHabitViewControllerDelegate: class {
+    func createHabitVCDidDismiss(_ vc: CreateHabitViewController)
+}
+
 class CreateHabitViewController: UIViewController {
 
+    weak var delegate: CreateHabitViewControllerDelegate?
+    private let titleLabel: UILabel = {
+           let label = UILabel()
+           label.text = "Choose a habit"
+           return label
+    }()
     private let collectionView: UICollectionView = {
         let layout = UICollectionViewFlowLayout()
         let collectionView = UICollectionView(frame: CGRect.zero, collectionViewLayout: layout)
-        layout.scrollDirection = .horizontal
+        layout.scrollDirection = .vertical
         collectionView.backgroundColor = .white
         return collectionView
-    }()
-    private let button: UIButton = {
-        let button = UIButton()
-        button.setTitle("Pick Photo", for: .normal)
-        button.setTitleColor(.black, for: .normal)
-        return button
     }()
     private let habitNames: [String] = [
         "book",
         "bulb",
         "clock",
         "code",
-        "drop",
         "food",
         "grow",
         "gym",
@@ -38,22 +41,24 @@ class CreateHabitViewController: UIViewController {
         "other"
     ]
 
+
     override func viewDidLoad() {
         super.viewDidLoad()
         configureLayout()
         setupCollectionView()
-        button.addTarget(self, action: #selector(buttonTapped), for: .touchUpInside)
     }
 
     private func configureLayout() {
         view.backgroundColor = .white
+        let safeArea = view.safeAreaLayoutGuide
         view.sv(
-            collectionView,
-            button
+            titleLabel,
+            collectionView
         )
-        collectionView.top(0).fillHorizontally().height(60%)
-        button.centerHorizontally()
-        button.Top == collectionView.Bottom
+        titleLabel.Top == safeArea.Top + 16
+        titleLabel.centerHorizontally()
+        collectionView.Top == titleLabel.Bottom + 16
+        collectionView.fillHorizontally(m: 16).height(60%).centerHorizontally()
     }
 
     private func setupCollectionView() {
@@ -61,19 +66,10 @@ class CreateHabitViewController: UIViewController {
         collectionView.dataSource = self
         collectionView.delegate = self
     }
-
-    @objc private func buttonTapped() {
-        guard let indexPath = self.collectionView.indexPathsForSelectedItems?.first else { return }
-        let habitName = habitNames[indexPath.row]
-        guard let context = CoreDataManager.shared.context else { return }
-        let habit = NSEntityDescription.insertNewObject(forEntityName: "Habit", into: context) as! Habit
-        habit.imageName = habitName
-        let habitNameVC = HabitNameViewController(habit)
-        present(habitNameVC, animated: true, completion: nil)
-    }
 }
 
-extension CreateHabitViewController: UICollectionViewDataSource, UICollectionViewDelegate {
+extension CreateHabitViewController: UICollectionViewDataSource, UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return habitNames.count
     }
@@ -87,9 +83,24 @@ extension CreateHabitViewController: UICollectionViewDataSource, UICollectionVie
 
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let habitName = habitNames[indexPath.row]
+        guard let context = CoreDataManager.shared.context else { return }
+        let habit = NSEntityDescription.insertNewObject(forEntityName: "Habit", into: context) as! Habit
+        habit.imageName = habitName
+        let habitNameVC = HabitNameViewController(habit)
+        habitNameVC.delegate = self
+        present(habitNameVC, animated: true, completion: nil)
     }
 
-    func collectionView(_ collectionView: UICollectionView, shouldHighlightItemAt indexPath: IndexPath) -> Bool {
-        true
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        return CGSize(width: collectionView.frame.width / 3.5, height: collectionView.frame.width / 3.5)
+    }
+    
+}
+
+extension CreateHabitViewController: HabitNameViewControllerDelegate {
+    func habitNameVCDidDismiss(_ vc: HabitNameViewController) {
+        dismiss(animated: true) {
+            self.delegate?.createHabitVCDidDismiss(self)
+        }
     }
 }
